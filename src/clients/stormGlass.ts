@@ -1,7 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import { InternalError } from '@src/util/errors/internal-error';
 import { AxiosStatic } from 'axios';
-import { response } from 'express';
 
 export interface StormGlassPointSource {
   [key: string]: number;
@@ -68,6 +67,7 @@ export class StormGlass {
       );
 
       return this.normalizeResponse(response.data);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (err: any) {
       if (err.response && err.response.status) {
         throw new StormGlassResponseError(

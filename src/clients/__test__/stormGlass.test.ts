@@ -1,5 +1,5 @@
 import { StormGlass } from '@src/clients/stormGlass';
-import axios, { Axios } from 'axios';
+import axios from 'axios';
 import stormGlassNormalized3HoursFixture from '@test/fixtures/stormglass_normalized_response_3_hours.json';
 import stormGlassWeather3hoursFixture from '@test/fixtures/stormGlass_weather_3_hours.json';
 
